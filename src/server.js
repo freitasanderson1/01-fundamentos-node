@@ -4,7 +4,7 @@ const metodos = []
 
 const server = http.createServer((req, res) => {
     const { method, url } = req
-    metodos.push(method)
+    method === 'GET' ? console.log('Esse não entra'):metodos.push(method)
 
     console.log(`Metodo: ${method} e URL: ${url}`)
     if(method === 'GET' && url=== '/'){
